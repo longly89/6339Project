@@ -1636,7 +1636,6 @@ type=strongsubj len=1 word1=decry pos1=verb stemmed1=y priorpolarity=negative
 type=strongsubj len=1 word1=dedicated pos1=adj stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=deduce pos1=verb stemmed1=y priorpolarity=neutral
 type=weaksubj len=1 word1=deep pos1=adj stemmed1=n priorpolarity=neutral
-type=weaksubj len=1 word1=deep pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=deeply pos1=anypos stemmed1=n priorpolarity=neutral
 type=strongsubj len=1 word1=deepening pos1=adj stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=deepening pos1=noun stemmed1=n priorpolarity=negative
