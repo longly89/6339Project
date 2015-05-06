@@ -27,13 +27,11 @@
 	<body>
 		<form action="index.php" method="POST"	>
 			Find: <input type="text" name="find" id="find">
-			Near: <input type="text" name="location" id="location">
 			<input type="submit" class="myButton" value="">
 			<input type="hidden" name="name" id="name" value="">
-			<input type="hidden" name="address" id="address" value="">
 		</form>
 
-		<canvas id="myCanvas" width="1200" height="1000" style="border:1px solid #c3c3c3;">
+		<canvas id="myCanvas" width="1200" height="1000" style="border:0	px solid #c3c3c3;">
 					Your browser does not support the HTML5 canvas tag.
 		</canvas>
 
@@ -115,12 +113,12 @@
 				ctx.font = "bold 30px Times New Roman";
 				ctx.fillStyle = "red";
 				ctx.textAlign = "center";
-				ctx.fillText(name, 100, 50); 	
+				ctx.fillText(name, name.length * 8, 50); 	
 				
 				ctx.font = "bold 15px Times New Roman";
 				ctx.fillStyle = "grey";
 				ctx.textAlign = "left";
-				ctx.fillText(count + " reviews", 200, 50); 	
+				ctx.fillText(count + " reviews", name.length * 17, 50); 	
 				
 				
 				ctx.font = "bold 20px Times New Roman";

@@ -23,10 +23,8 @@
 		<div class="ui-widget">
 			<form action="index.php" method="POST"	>
 				Find: <input type="text" name="find" id="find">
-				Near: <input type="text" name="location" id="location">
 				<input type="submit" class="myButton" value="">
 				<input type="hidden" name="name" id="name" value="">
-				<input type="hidden" name="address" id="address" value="">
 				
 			</form>
 			<script type="text/javascript">
@@ -53,18 +51,14 @@
 			</script>
 			
 			<?php
-				if (isset($_POST["name"]) && isset($_POST["address"])) {
+				if (isset($_POST["name"])) {
 					$name = $_POST["name"];
-					$address = $_POST["address"];
-					if (strcmp($name, "") != 0 && strcmp($address, "") != 0) {
+					if (strcmp($name, "") != 0) {
 						$data = array();
 						if (($handle = fopen("restaurant_review", "r")) !== FALSE) {
 							while (($line = fgets($handle)) !== FALSE) {
 								$json = json_decode($line, true);
-								$full_address = split("\n",$json["full_address"]);
-								$zip = $full_address[count($full_address) - 1];
-								if (strpos(strtolower($zip), strtolower($address)) !== false
-									&& strpos(strtolower($json["name"]), strtolower($name)) !== false) {
+								if (strpos(strtolower($json["name"]), strtolower($name)) !== false) {
 										array_push($data, $json);
 								}
 								
